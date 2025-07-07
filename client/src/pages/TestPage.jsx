@@ -171,7 +171,7 @@ export default function TestPage() {
           body: JSON.stringify({ email, score: percentage }),
         });
 
-        const certRes = await fetch(`${import.meta.env.VITE_BACKEND}api/send-certificate`||"http://localhost:5000/api/send-certificate", {
+        const certRes = await fetch(`${import.meta.env.VITE_BACKEND}/api/send-certificate`||"http://localhost:5000/api/send-certificate", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email, name, score: percentage }),
