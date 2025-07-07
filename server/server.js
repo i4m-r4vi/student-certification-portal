@@ -15,6 +15,9 @@ app.use("/api/student", studentRoutes);
 app.use("/api",certificateRoutes);
 
 // Connect to MongoDB (replace db name as needed)
+app.get('/',(req,res)=>{
+  res.status(200).json({message:"Successfully Working"})
+})
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
