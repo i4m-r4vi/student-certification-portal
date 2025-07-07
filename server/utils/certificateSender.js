@@ -9,7 +9,7 @@ dotenv.config();
 const generateCertificate = (name, score) => {
   const doc = new PDFDocument({ size: "A4", layout: "portrait" });
   const fileName = `certificate_${name.replace(/\s/g, "_")}.pdf`;
-  const filePath = path.join(__dirname, "..", "temp", fileName);
+  const filePath = path.join(__dirname, "..", "temp1", fileName);
 
   const bgImage = score > 95 ? "platinum.jpg" : score > 70 ? "gold.jpg" : "silver.jpg";
 
